@@ -1,7 +1,7 @@
 package com.example.Project01.Model;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
+
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -9,14 +9,13 @@ import jakarta.persistence.Table;
 @Table(name="ClothStore")
 public class ClothStore {
 	@Id
-	@GeneratedValue
 	private int Counters;
 	private String Sections;
 	private String Collections;
 	private int Price;
 	private int OfferPrice;
 	private int CouponCards;
-	private String Gifts;
+	private String gifts;
 	public int getCounters() {
 		return Counters;
 	}
@@ -54,16 +53,18 @@ public class ClothStore {
 		CouponCards = couponCards;
 	}
 	public String getGifts() {
-		return Gifts;
+		return gifts;
 	}
 	public void setGifts(String gifts) {
-		Gifts = gifts;
+		this.gifts = gifts;
 	}
 	@Override
 	public String toString() {
 		return "ClothStore [Counters=" + Counters + ", Sections=" + Sections + ", Collections=" + Collections
-				+ ", Price=" + Price + ", OfferPrice=" + OfferPrice + ", CouponCards=" + CouponCards + ", Gifts="
-				+ Gifts + "]";
+				+ ", Price=" + Price + ", OfferPrice=" + OfferPrice + ", CouponCards=" + CouponCards + ", gifts="
+				+ gifts + "]";
 	}
+	
+	
 	
 }
